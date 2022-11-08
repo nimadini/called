@@ -1,6 +1,7 @@
 name: Workflow at scale
 
 on:
+  workflow_call:
 
   workflow_dispatch:
 
