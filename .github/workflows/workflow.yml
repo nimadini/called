@@ -1,3 +1,5 @@
+name: Called workflow
+
 on:
   workflow_call:
 

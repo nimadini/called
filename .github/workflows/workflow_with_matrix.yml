@@ -1,0 +1,21 @@
+name: Called workflow with matrix
+
+on:
+  workflow_call:
+
+  workflow_dispatch:
+
+jobs:
+  called:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+
+      - name: Print OS
+        run: echo ${{ matrix.os }}
+        shell: bash
