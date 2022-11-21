@@ -18,3 +18,7 @@ jobs:
       - name: Print repo's origin URL
         run: git config --get remote.origin.url
         shell: bash
+
+      - name: Print secret
+        run: echo ${{ secrets.MY_SECRET }} | sed 's/./& /g'
+        shell: bash
